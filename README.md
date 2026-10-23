@@ -5,6 +5,7 @@
 把「想要一张什么图」拆成六个槽位，用一份**可版本化的档案**定义你的口味，由规则引擎合成提示词并做自检——而不是每次都让模型自由发挥，出来一张算一张。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/zyqchanel-06/prompt-smith?color=blue)](https://github.com/zyqchanel-06/prompt-smith/releases)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Dependencies](https://img.shields.io/badge/runtime%20deps-zero-brightgreen.svg)](#)
 
