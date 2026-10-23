@@ -1,0 +1,137 @@
+{
+  "name": "anime-general",
+  "description": "通用动漫立绘风格示例档案。复制一份改成自己的口味即可，字段含义见 docs/writing-profiles.md。",
+  "trigger": "anime style",
+  "quality": [
+    "masterpiece",
+    "best quality",
+    "absurdres",
+    "very aesthetic",
+    "highly detailed"
+  ],
+  "negative_base": [
+    "lowres",
+    "bad anatomy",
+    "bad hands",
+    "extra limbs",
+    "text",
+    "error",
+    "missing fingers",
+    "extra digit",
+    "fewer digits",
+    "cropped",
+    "worst quality",
+    "low quality",
+    "jpeg artifacts",
+    "signature",
+    "watermark",
+    "username",
+    "blurry",
+    "ugly",
+    "deformed"
+  ],
+  "slots": {
+    "subject": {
+      "default": "1girl, solo",
+      "tags": [
+        "1girl",
+        "solo",
+        "1boy",
+        "2girls"
+      ]
+    },
+    "outfit": {
+      "default": "",
+      "tags": [
+        "hanfu",
+        "evening dress",
+        "casual wear",
+        "armor"
+      ]
+    },
+    "scene": {
+      "default": "",
+      "tags": [
+        "bedroom",
+        "ballroom",
+        "forest",
+        "city street",
+        "library"
+      ]
+    },
+    "pose": {
+      "default": "looking at viewer",
+      "tags": [
+        "standing",
+        "sitting",
+        "lying",
+        "kneeling"
+      ]
+    },
+    "expression": {
+      "default": "soft smile",
+      "tags": [
+        "smile",
+        "serious",
+        "surprised",
+        "closed eyes"
+      ]
+    },
+    "framing": {
+      "default": "full body",
+      "tags": [
+        "full body",
+        "upper body",
+        "cowboy shot",
+        "portrait"
+      ]
+    }
+  },
+  "required": [
+    "1girl"
+  ],
+  "forbidden": [
+    "lowres",
+    "blurry",
+    "watermark",
+    "signature"
+  ],
+  "conflicts": [
+    {
+      "a": "daylight",
+      "b": "candlelight",
+      "reason": "两套光源互斥，画面会平"
+    },
+    {
+      "a": "full body",
+      "b": "close-up",
+      "reason": "构图范围冲突，模型容易画成半身"
+    }
+  ],
+  "render": {
+    "adapter": "comfyui",
+    "comfyui_url": "http://127.0.0.1:8188",
+    "checkpoint": "your_sdxl_checkpoint.safetensors",
+    "lora": {
+      "name": "your_style_lora.safetensors",
+      "strength": 0.8
+    },
+    "width": 832,
+    "height": 1216,
+    "steps": 30,
+    "cfg": 7,
+    "sampler": "euler_ancestral",
+    "scheduler": "normal"
+  },
+  "quality_gate": {
+    "brightness": [
+      110,
+      175
+    ],
+    "contrast_min": 60
+  },
+  "safety": {
+    "adult_only": true,
+    "max_tags": 75
+  }
+}

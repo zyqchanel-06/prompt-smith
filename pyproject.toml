@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-smith"
+version = "0.1.0"
+description = "槽位驱动的 SDXL / Danbooru 提示词构建框架：档案配置 + 规则自检 + 量化质量门"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "zyqchanel-06" }]
+keywords = ["sdxl", "stable-diffusion", "prompt-engineering", "danbooru", "comfyui"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6"]
+quality = ["Pillow>=9"]
+
+[project.scripts]
+promptsmith = "promptsmith.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/zyqchanel-06/prompt-smith"
+
+[tool.setuptools.packages.find]
+include = ["promptsmith*"]
