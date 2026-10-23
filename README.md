@@ -9,6 +9,8 @@
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Dependencies](https://img.shields.io/badge/runtime%20deps-zero-brightgreen.svg)](#)
 
+![build 与 review 命令的真实输出：PASS 与 FAIL 对比](docs/screenshots/build-review.svg)
+
 ---
 
 ## 它解决什么问题

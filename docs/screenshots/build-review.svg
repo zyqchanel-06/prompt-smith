@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="690" viewBox="0 0 1180 690">
+<rect x="0" y="0" width="1180" height="690" rx="10" fill="#0d1117"/>
+<rect x="0" y="0" width="1180" height="42" rx="10" fill="#161b22"/>
+<rect x="0" y="32" width="1180" height="10" rx="0" fill="#161b22"/>
+<circle cx="22" cy="21" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="21" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="21" r="6" fill="#27c93f"/>
+<text x="1054" y="26" font-family="Consolas, Menlo, monospace" font-size="13" fill="#6e7681">prompt-smith</text>
+<text x="26" y="66" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">$ promptsmith build -p profiles/example.json \\</text>
+<text x="26" y="93" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">      --subject "1girl, solo" --scene "forest, moonlight"</text>
+<text x="26" y="147" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">POSITIVE:</text>
+<text x="26" y="174" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#79c0ff" xml:space="preserve">  anime style, masterpiece, best quality, absurdres, very aesthetic,</text>
+<text x="26" y="201" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#79c0ff" xml:space="preserve">  highly detailed, 1girl, solo, forest, moonlight, looking at viewer,</text>
+<text x="26" y="228" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#79c0ff" xml:space="preserve">  soft smile, full body</text>
+<text x="26" y="255" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">NEGATIVE:</text>
+<text x="26" y="282" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#6e7681" xml:space="preserve">  lowres, bad anatomy, bad hands, extra limbs, text, error, ...</text>
+<text x="26" y="309" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">CHECK:</text>
+<text x="26" y="336" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#6e7681" xml:space="preserve">  · [SLOT_EMPTY] 槽位「穿搭」为空且档案没有默认值</text>
+<text x="26" y="363" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">VERDICT: PASS</text>
+<text x="26" y="417" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">$ promptsmith review -p profiles/example.json \\</text>
+<text x="26" y="444" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">      --positive "masterpiece, 1girl, watermark"</text>
+<text x="26" y="498" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">POSITIVE:</text>
+<text x="26" y="525" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">  masterpiece, 1girl, watermark</text>
+<text x="26" y="552" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">CHECK:</text>
+<text x="26" y="579" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#ff7b72" xml:space="preserve">  ✗ [TRIGGER_NOT_FIRST] 正向提示词必须以触发词开头：anime style</text>
+<text x="26" y="606" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#ff7b72" xml:space="preserve">  ✗ [FORBIDDEN_TAG] 正向提示词出现红线词：watermark</text>
+<text x="26" y="633" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#ff7b72" xml:space="preserve">VERDICT: FAIL</text>
+</svg>
