@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: 单测 + CLI 冒烟 (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 编译检查
+        run: python -m compileall -q promptsmith
+
+      - name: 单元测试
+        run: python -m unittest discover -s tests -v
+
+      - name: CLI 冒烟（describe / build / review）
+        run: |
+          python -m promptsmith describe -p profiles/example.json
+          python -m promptsmith build -p profiles/example.json --subject "1girl, solo" --json
+          python -m promptsmith review -p profiles/example.json --positive "anime style, masterpiece, 1girl" || true
+
+      - name: 拒绝渲染必须退出码非零（行为契约）
+        run: |
+          if python -m promptsmith review -p profiles/example.json --positive "masterpiece, watermark"; then
+            echo "应当失败却成功了"; exit 1
+          else
+            echo "符合预期：自检失败返回非零";
+          fi
